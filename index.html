@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Kele Art Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0f0f14;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #8b5cf6;
+      color: white;
+      cursor: pointer;
+    }
+    button.secondary {
+      background: #1f2937;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🐾✨ Kele Art Bot</h1>
+<p>Fursuits, illustrations, keychains & custom creature art.</p>
+<p>Arte personalizado y piezas únicas hechas con pasión.</p>
+
+<button onclick="openPhotos()">📸 Ver trabajos</button>
+<button onclick="openSocial()">🌐 Redes sociales</button>
+<button class="secondary" onclick="contact()">💬 Contactarme</button>
+
+<script>
+  const tg = window.Telegram.WebApp;
+  tg.ready();
+
+  function openPhotos() {
+    tg.openLink("https://instagram.com/TU_INSTAGRAM");
+  }
+
+  function openSocial() {
+    tg.openLink("https://linktr.ee/TU_LINKTREE");
+  }
+
+  function contact() {
+    tg.openTelegramLink("https://t.me/TU_USUARIO");
+  }
+</script>
+
+</body>
+</html>
